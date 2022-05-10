@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  nginx:
+    image: duplicate-requests/nginx
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - "80:80"
+
+  app1:
+    image: duplicate-requests/app
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    expose:
+      - "8000"
+
+  app2:
+    image: duplicate-requests/app
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    expose:
+      - "8000"
