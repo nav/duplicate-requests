@@ -2,7 +2,7 @@
 
 A PoC to demo request duplication to multiple upstreams with Nginx.
 
-Using (Nginx's mirror module)[http://nginx.org/en/docs/http/ngx_http_mirror_module.html], we can send an incoming request (including body) to a secondary upstream. Responses from the secondary upstream are ignored.
+Using [Nginx's mirror module](http://nginx.org/en/docs/http/ngx_http_mirror_module.html), we can send an incoming request (including body) to a secondary upstream. Responses from the secondary upstream are ignored.
 
 # Diagram
 
